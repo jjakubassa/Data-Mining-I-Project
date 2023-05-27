@@ -1,0 +1,11 @@
+Estimator,parameters,best_params,Scaler,Sampler,Clusterer,Feature Selector,Interaction feature,fraction,F2-score
+RandomForestClassifier,"{'max_depth': [3, 5, 7, 9, 11], 'criterion': ['gini', 'entropy'], 'n_estimators': [100, 200, 300, 400, 500]}","{'criterion': 'entropy', 'max_depth': 5, 'n_estimators': 200}",StandardScaler,OverSampler,passthrough,passthrough,passthrough,0.01,0.7758349911004084
+GradientBoostingClassifier,"{'n_estimators': [100, 200, 300, 400, 500], 'learning_rate': [0.01, 0.1, 1], 'max_depth': [3, 5, 7]}","{'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 500}",StandardScaler,OverSampler,passthrough,SelectKBest,PolynomialFeatures,0.01,0.7615681233933161
+MLPClassifier,"{'hidden_layer_sizes': [(50,), (100,), (50, 50), (100, 100)]}","{'hidden_layer_sizes': (100, 100)}",StandardScaler,OverSampler,KMeans,SelectKBest,passthrough,0.01,0.7321818354370314
+SVC,"{'C': [0.1, 1, 10, 100], 'kernel': ['linear', 'poly', 'rbf', 'sigmoid']}","{'C': 1, 'kernel': 'rbf'}",StandardScaler,OverSampler,KMeans,SelectKBest,passthrough,0.01,0.7319667375749371
+LogisticRegression,"{'C': [0.1, 1, 10, 100], 'penalty': ['l1', 'l2'], 'solver': ['liblinear', 'saga']}","{'C': 0.1, 'penalty': 'l2', 'solver': 'saga'}",StandardScaler,UnderSampler,passthrough,passthrough,PolynomialFeatures,0.01,0.7340665815574978
+AdaBoostClassifier,"{'n_estimators': [100, 200, 300, 400, 500]}",{'n_estimators': 100},StandardScaler,UnderSampler,passthrough,passthrough,passthrough,0.01,0.7754957507082154
+XGBClassifier,"{'n_estimators': [100, 500], 'max_depth': [3, 7, 11]}","{'max_depth': 7, 'n_estimators': 100}",StandardScaler,OverSampler,passthrough,SelectKBest,passthrough,0.01,0.7723185613359025
+DecisionTreeClassifier,"{'max_depth': [3, 5, 7, 9, 11], 'criterion': ['gini', 'entropy'], 'splitter': ['best', 'random']}","{'criterion': 'gini', 'max_depth': 11, 'splitter': 'best'}",RobustScaler,OverSampler,passthrough,SelectFpr,passthrough,0.01,0.7600401606425703
+KNeighborsClassifier,"{'n_neighbors': [3, 5, 7, 9, 11]}",{'n_neighbors': 7},StandardScaler,UnderSampler,passthrough,passthrough,PolynomialFeatures,0.01,0.7236842105263158
+GaussianNB,"{'var_smoothing': [1e-09, 1e-08, 1e-07, 1e-06]}",{'var_smoothing': 1e-07},MinMaxScaler,OverSampler,passthrough,SelectKBest,PolynomialFeatures,0.01,0.6812003914319887
