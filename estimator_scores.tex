@@ -1,0 +1,10 @@
+\begin{tabular}{llllllllrr}
+\toprule
+           Estimator &                                         parameters &                                        best\_params &         Scaler &    Sampler &   Clusterer & Feature Selector & Interaction feature &  fraction &  F2-score \\
+\midrule
+KNeighborsClassifier &                  \{'n\_neighbors': [3, 5, 7, 9, 11]\} &                                 \{'n\_neighbors': 5\} & StandardScaler & passtrough &      KMeans &      passthrough &         passthrough &      0.01 &  0.658128 \\
+  LogisticRegression & \{'C': [0.1, 1, 10, 100], 'penalty': ['l1', 'l2'... & \{'C': 100, 'penalty': 'l1', 'solver': 'liblinear'\} &   MinMaxScaler & passtrough & passthrough &      SelectKBest &  PolynomialFeatures &      0.01 &  0.660643 \\
+KNeighborsClassifier &                  \{'n\_neighbors': [3, 5, 7, 9, 11]\} &                                 \{'n\_neighbors': 5\} & StandardScaler & passtrough &      KMeans &      passthrough &         passthrough &      0.01 &  0.658128 \\
+  LogisticRegression & \{'C': [0.1, 1, 10, 100], 'penalty': ['l1', 'l2'... & \{'C': 100, 'penalty': 'l1', 'solver': 'liblinear'\} &   MinMaxScaler & passtrough & passthrough &      SelectKBest &  PolynomialFeatures &      0.01 &  0.660643 \\
+\bottomrule
+\end{tabular}
